@@ -1,11 +1,9 @@
-CC = gcc
-CFLAGS = -Wall -g
+CC=gcc
+CFLAGS=-Wall -g
+LDFLAGS=-lncurses
 
-SRC = src/main.c src/todo.c src/utils.c src/io.c
-OBJ = $(SRC:.c=.o)
+SRC=src/main.c src/ui.c src/todo.c
+INC=-Iinclude
 
 todo: $(SRC)
-	$(CC) $(CFLAGS) -o todo $(SRC)
-
-clean:
-	rm -f todo *.o
+	$(CC) $(CFLAGS) -o todo $(SRC) $(LDFLAGS) $(INC)
