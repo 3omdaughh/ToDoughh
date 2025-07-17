@@ -7,3 +7,6 @@ INC=-Iinclude
 
 todo: $(SRC)
 	$(CC) $(CFLAGS) -o todo $(SRC) $(LDFLAGS) $(INC)
+
+clean:
+	rm -f todo *.o
