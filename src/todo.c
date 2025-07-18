@@ -8,7 +8,7 @@ static int count = 0;
 
 void todo_init() 
 {
-	FILE *f = fopen("data/todo.txt", "r");
+	FILE *f = fopen("task/todo.txt", "r");
 	if (!f) return;
 
 	char buf[256];
@@ -46,7 +46,7 @@ int todo_count()
 
 void todo_save() 
 {
-	FILE *f = fopen("data/todo.txt", "w");
+	FILE *f = fopen("task/todo.txt", "w");
 	for (int i = 0; i < count; ++i) fprintf(f, "%s\n", todos[i]);
 	fclose(f);
 }

@@ -3,7 +3,6 @@
 #include <string.h>
 #include "../include/todo.h"
 #include "../include/llist.h"
-#include "../include/utils.h"
 #include "../include/io.h"
 
 /* External reference from todo.c */
